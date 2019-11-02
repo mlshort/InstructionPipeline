@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PipelineProject", "PipelineProject\PipelineProject.vcxproj", "{2A046A0B-1918-4C88-85FD-4139B0CCE800}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3CEF972C-EBF4-40F6-9DA8-E8CC09568A1F}"
+	ProjectSection(SolutionItems) = preProject
+		Doxyfile.dxg = Doxyfile.dxg
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference Documents", "Reference Documents", "{B819F1EC-ECD1-4222-9195-8B11BB649D73}"
+	ProjectSection(SolutionItems) = preProject
+		Reference Documents\BranchAndDataDependencies_IEEE_July1987.pdf = Reference Documents\BranchAndDataDependencies_IEEE_July1987.pdf
+		Reference Documents\Chap13_Graphs_2007.pdf = Reference Documents\Chap13_Graphs_2007.pdf
+		Reference Documents\DataDependencies_UNC_2008.pdf = Reference Documents\DataDependencies_UNC_2008.pdf
+		Reference Documents\InstructionPipelining_28Oct2010.pdf = Reference Documents\InstructionPipelining_28Oct2010.pdf
+		Reference Documents\InstructionScheduling.pdf = Reference Documents\InstructionScheduling.pdf
+		Reference Documents\OptimumPipelineDepthForAMicroProcessor_IBM.pdf = Reference Documents\OptimumPipelineDepthForAMicroProcessor_IBM.pdf
+		Reference Documents\Pipeline Stalling.pdf = Reference Documents\Pipeline Stalling.pdf
+		Reference Documents\PipelineHazards_CSE240A.pdf = Reference Documents\PipelineHazards_CSE240A.pdf
+		Reference Documents\PipelineHazards_ECE152_2012.pdf = Reference Documents\PipelineHazards_ECE152_2012.pdf
+		Reference Documents\Pipelining_UMass_ECE232.pdf = Reference Documents\Pipelining_UMass_ECE232.pdf
+		Reference Documents\ProgramSlicing.pdf = Reference Documents\ProgramSlicing.pdf
+		Reference Documents\RuntimeDepencyAnalysisForLoopPipelining.pdf = Reference Documents\RuntimeDepencyAnalysisForLoopPipelining.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{FF1DBFB9-5407-4CEE-9A32-891A9CECE539}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\PipelineProject.pdf = Documentation\PipelineProject.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E143E5EC-4AFD-4082-97A8-6498135C9886}"
+	ProjectSection(SolutionItems) = preProject
+		Data\InstructionInputData.txt = Data\InstructionInputData.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A046A0B-1918-4C88-85FD-4139B0CCE800}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2A046A0B-1918-4C88-85FD-4139B0CCE800}.Debug|Win32.Build.0 = Debug|Win32
+		{2A046A0B-1918-4C88-85FD-4139B0CCE800}.Release|Win32.ActiveCfg = Release|Win32
+		{2A046A0B-1918-4C88-85FD-4139B0CCE800}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C948173-3B47-43D5-8ECE-0991A3A35D9A}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://ualr-projects.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = PipelineProject\\PipelineProject.vcxproj
+		SccProjectName1 = PipelineProject
+		SccLocalPath1 = PipelineProject
+	EndGlobalSection
+EndGlobal
