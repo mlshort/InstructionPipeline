@@ -9,9 +9,6 @@ DIRECTORY STRUCTURE:
 + --- \Documentation    (implementation documentation)
 + --- \Obj              (discardable binary intermediaries)
 
-DESCRIPTION:         see below  
-DATE WRITTEN:        November 25, 2014  
-
 Instruction Pipeline Project Overview
 ========================================================================
 
@@ -43,20 +40,20 @@ Reference(s)
   * Characterization of Branch and Data Dependencies in Programs for Evaluating 
     Pipeline Performance, Emma, Davidson, IEEE Transactions on Computer, 1987
     
-  * Instruction Scheduling, Cambridge University UK, 2005, 
-    http://www.cl.cam.ac.uk/teaching/2005/OptComp/slides/lecture14.pdf
+  * [Instruction Scheduling](http://www.cl.cam.ac.uk/teaching/2005/OptComp/slides/lecture14.pdf), 
+    Cambridge University UK, 2005 
    
   * The Optimum Pipeline Depth for a Microprocessor, IBM, 2005
  
-  * Graph Partitioning Implementation Strategy, University of CA, Berkeley,
-    http://parlab.eecs.berkeley.edu/wiki/_media/patterns/graph_partitioning.pdf
+  * [Graph Partitioning Implementation Strategy](http://parlab.eecs.berkeley.edu/wiki/_media/patterns/graph_partitioning.pdf),
+    University of CA, Berkeley
    
-  * Data Structures and Algorithms with Object-Oriented Design Patterns in C++,
-    Preiss, 1997, http://www.brpreiss.com/books/opus4/html/page9.html
+  * [Data Structures and Algorithms with Object-Oriented Design Patterns in C++](http://www.brpreiss.com/books/opus4/html/page9.html),
+    Preiss, 1997
    
-  * Data Abstraction & Problem Solving with C++, Carrano, 2007,
-    http://www.cs.rutgers.edu/~szhou/351/Graphs.pdf
+  * [Data Abstraction & Problem Solving with C++](http://www.cs.rutgers.edu/~szhou/351/Graphs.pdf), 
+    Carrano, 2007
  
-  * Technical Report - Polymorphic C++ Debugging for System Design, Doucet, Gupta, 
-    University of CA, Irvine, 2000, http://mesl.ucsd.edu/site/pubs/UCI-CECS-TR00-06.pdf
+  * [Technical Report - Polymorphic C++ Debugging for System Design](http://mesl.ucsd.edu/site/pubs/UCI-CECS-TR00-06.pdf),
+    Doucet, Gupta, University of CA, Irvine, 2000
       
