@@ -1,4 +1,4 @@
-NAME:     Instruction Pipeline Simulation
+# Instruction Pipeline Simulation
 
 DIRECTORY STRUCTURE: 
 =======================================================================
