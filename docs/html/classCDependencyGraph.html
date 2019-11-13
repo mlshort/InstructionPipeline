@@ -109,7 +109,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a808a77597aceb3c493c92f7ae7f3cd63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Destructor.  <a href="classCDependencyGraph.html#a808a77597aceb3c493c92f7ae7f3cd63">More...</a><br /></td></tr>
 <tr class="separator:a808a77597aceb3c493c92f7ae7f3cd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1eae3786c573d4a55e87aa24c04f6150"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCDependencyGraph.html#a1eae3786c573d4a55e87aa24c04f6150">AddNode</a> (const <a class="el" href="DependencyGraph_8h.html#ab6d9dd01d579c15e1b3273c0d1b4f042">NODE_ID_T</a> &amp;idNode) noexcept</td></tr>
-<tr class="memdesc:a1eae3786c573d4a55e87aa24c04f6150"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method adds a new node to the graph.  <a href="classCDependencyGraph.html#a1eae3786c573d4a55e87aa24c04f6150">More...</a><br /></td></tr>
+<tr class="memdesc:a1eae3786c573d4a55e87aa24c04f6150"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new node to the graph.  <a href="classCDependencyGraph.html#a1eae3786c573d4a55e87aa24c04f6150">More...</a><br /></td></tr>
 <tr class="separator:a1eae3786c573d4a55e87aa24c04f6150"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3763976b478505ef4e1e3b5c68f5edd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCDependencyGraph.html#a3763976b478505ef4e1e3b5c68f5edd8">AddEdge</a> (const <a class="el" href="DependencyGraph_8h.html#ab6d9dd01d579c15e1b3273c0d1b4f042">NODE_ID_T</a> &amp;idFromNode, const <a class="el" href="DependencyGraph_8h.html#ab6d9dd01d579c15e1b3273c0d1b4f042">NODE_ID_T</a> &amp;idToNode, int iWeight) noexcept</td></tr>
 <tr class="memdesc:a3763976b478505ef4e1e3b5c68f5edd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a directed edge between 2 existing nodes.  <a href="classCDependencyGraph.html#a3763976b478505ef4e1e3b5c68f5edd8">More...</a><br /></td></tr>
@@ -157,6 +157,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:ad9efeb7ad3805da313b1fa0daac2749a"><td class="mdescLeft">&#160;</td><td class="mdescRight">current number of nodes  <a href="classCDependencyGraph.html#ad9efeb7ad3805da313b1fa0daac2749a">More...</a><br /></td></tr>
 <tr class="separator:ad9efeb7ad3805da313b1fa0daac2749a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e472e1eab3094cb31e160c2500b9108"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classCGraphNode.html">CGraphNode</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCDependencyGraph.html#a9e472e1eab3094cb31e160c2500b9108">m_vNodes</a></td></tr>
+<tr class="memdesc:a9e472e1eab3094cb31e160c2500b9108"><td class="mdescLeft">&#160;</td><td class="mdescRight">container of nodes contained in graph  <a href="classCDependencyGraph.html#a9e472e1eab3094cb31e160c2500b9108">More...</a><br /></td></tr>
 <tr class="separator:a9e472e1eab3094cb31e160c2500b9108"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -381,7 +382,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This method adds a new node to the graph. </p>
+<p>Adds a new node to the graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">idNode</td><td>ID of the new node to be added</td></tr>
@@ -496,14 +497,14 @@ Private Attributes</h2></td></tr>
 <p>Performs a basic hash-translation of the index of the node from its associated ID. The returned index corresponds to the nodes offset within the vector.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">idNode</td><td>node ID</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">idNode</td><td>subject node ID</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">size_t</td><td>vector index for idNode </td></tr>
-    <tr><td class="paramname">INVALID_NODE_INDEX</td><td>if no valid index exists</td></tr>
+    <tr><td class="paramname">size_t</td><td>Index for idNode </td></tr>
+    <tr><td class="paramname">INVALID_NODE_INDEX</td><td>if no valid Index exists</td></tr>
   </table>
   </dd>
 </dl>
@@ -653,6 +654,7 @@ Private Attributes</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">true</td><td>if idNode is a valid ID </td></tr>
+    <tr><td class="paramname">false</td><td>on invalid node ID </td></tr>
   </table>
   </dd>
 </dl>
@@ -684,17 +686,17 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Performs basic validation of a node index. </p>
-<p>The nIndex is probed to see if it falls within the underlying vector boundaries.</p>
+<p>nIndex is probed to see if it falls within the underlying vector boundaries.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">nIndex</td><td>index to be verified</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nIndex</td><td>Index to be verified</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>if nIndex falls within the current vector range </td></tr>
-    <tr><td class="paramname">false</td><td>if nIndex is found out-of-bounds </td></tr>
+    <tr><td class="paramname">true</td><td>if Index falls within the current vector range </td></tr>
+    <tr><td class="paramname">false</td><td>if Index is found out-of-bounds </td></tr>
   </table>
   </dd>
 </dl>
@@ -797,6 +799,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>container of nodes contained in graph </p>
 
 </div>
 </div>

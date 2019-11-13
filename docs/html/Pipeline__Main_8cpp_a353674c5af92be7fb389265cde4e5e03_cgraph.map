@@ -6,5 +6,5 @@
 <area shape="rect" id="node5" href="$Pipeline__Main_8cpp.html#a97ef98457a10772f08719bea2415c5e9" title="CalculateSequentialExecutionCycles calculates the number of cycles required to &quot;sequentially&quot; execute..." alt="" coords="342,71,537,112"/>
 <area shape="rect" id="node4" href="$Pipeline__Main_8cpp.html#ab0e910dd8ec1b6582ce41c3cf6818083" title="CalculateNumberOfStallsRequired calculates data&#45;dependent pipeline stalls." alt="" coords="587,13,805,39"/>
 <area shape="rect" id="node7" href="$classCDependencyGraph.html#a3763976b478505ef4e1e3b5c68f5edd8" title="Adds a directed edge between 2 existing nodes." alt="" coords="340,137,539,163"/>
-<area shape="rect" id="node8" href="$classCDependencyGraph.html#a1eae3786c573d4a55e87aa24c04f6150" title="This method adds a new node to the graph." alt="" coords="340,187,539,214"/>
+<area shape="rect" id="node8" href="$classCDependencyGraph.html#a1eae3786c573d4a55e87aa24c04f6150" title="Adds a new node to the graph." alt="" coords="340,187,539,214"/>
 </map>

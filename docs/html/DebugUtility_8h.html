@@ -173,7 +173,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">int</td><td>the number of characters written if the number of characters to write is less than or equal to count; if the number of characters to write is greater than count, these functions return -1 indicating that output has been truncated. The return value does not include the terminating null, if one is written. </td></tr>
+    <tr><td class="paramname">int</td><td>the number of characters written if the number of characters to write is less than or equal to count; The return value does not include the terminating null, if one is written. </td></tr>
+    <tr><td class="paramname">-1</td><td>if the number of characters to write is greater than count, returns -1 indicating that output has been truncated. </td></tr>
   </table>
   </dd>
 </dl>
@@ -218,14 +219,14 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">szModulePath</td><td>destination memory address used to write application's directory path </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cchLen</td><td>count of characters in available to be written in destination buffer</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cchLen</td><td>count of characters available to be written in destination buffer</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">TCHAR*</td><td>destination address </td></tr>
-    <tr><td class="paramname">NULL</td><td>on error </td></tr>
+    <tr><td class="paramname">nullptr</td><td>on error </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,5 +1,5 @@
 <map id="LoadData" name="LoadData">
 <area shape="rect" id="node1" title="LoadData performs basic file level data input." alt="" coords="5,31,83,57"/>
 <area shape="rect" id="node2" href="$classCDependencyGraph.html#a3763976b478505ef4e1e3b5c68f5edd8" title="Adds a directed edge between 2 existing nodes." alt="" coords="131,5,329,32"/>
-<area shape="rect" id="node3" href="$classCDependencyGraph.html#a1eae3786c573d4a55e87aa24c04f6150" title="This method adds a new node to the graph." alt="" coords="131,56,329,83"/>
+<area shape="rect" id="node3" href="$classCDependencyGraph.html#a1eae3786c573d4a55e87aa24c04f6150" title="Adds a new node to the graph." alt="" coords="131,56,329,83"/>
 </map>

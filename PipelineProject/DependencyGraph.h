@@ -304,7 +304,7 @@ class CDependencyGraph
 {
     size_t                  m_nMaxNodes; ///< upper limit on nodes allowed
     size_t                  m_nNumNodes; ///< current number of nodes
-    std::vector<CGraphNode> m_vNodes;
+    std::vector<CGraphNode> m_vNodes;    ///< container of nodes contained in graph
 
 public:
 
@@ -329,7 +329,7 @@ public:
     /// Default Destructor
     ~CDependencyGraph() = default;
     /**
-        @brief This method adds a new node to the graph.
+        @brief Adds a new node to the graph.
 
         @param [in] idNode      ID of the new node to be added
 
@@ -412,20 +412,21 @@ private:
         @param [in] idNode      value to be verified
 
         @retval true            if idNode is a valid ID
+        @retval false           on invalid node ID
     */
     bool    IsValidNodeID(const NODE_ID_T& idNode) const noexcept;
 
     /**
         @brief Performs basic validation of a node index.
 
-        The nIndex is probed to see if it falls within the underlying vector
+        nIndex is probed to see if it falls within the underlying vector
         boundaries.
 
-        @param [in] nIndex      index to be verified
+        @param [in] nIndex      Index to be verified
 
-        @retval true            if nIndex falls within the current
+        @retval true            if Index falls within the current
                                 vector range
-        @retval false           if nIndex is found out-of-bounds
+        @retval false           if Index is found out-of-bounds
     */
     constexpr bool    IsValidNodeIndex(size_t nIndex) const noexcept
     {
@@ -439,10 +440,10 @@ private:
     the node from its associated ID. The returned index
     corresponds to the nodes offset within the vector.
 
-    @param [in] idNode          node ID
+    @param [in] idNode          subject node ID
 
-    @retval size_t              vector index for idNode
-    @retval INVALID_NODE_INDEX  if no valid index exists
+    @retval size_t              Index for idNode
+    @retval INVALID_NODE_INDEX  if no valid Index exists
 */
     size_t  GetNodeIndex    (const NODE_ID_T& idNode) const noexcept;
 

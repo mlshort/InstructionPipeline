@@ -95,7 +95,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7aa38fd85517b659fd6fe53ac285c93e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor.  <a href="classCPipelineSim.html#a7aa38fd85517b659fd6fe53ac285c93e">More...</a><br /></td></tr>
 <tr class="separator:a7aa38fd85517b659fd6fe53ac285c93e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c4f8cce69e3676619079d932bd30536"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCPipelineSim.html#a2c4f8cce69e3676619079d932bd30536">~CPipelineSim</a> ()=default</td></tr>
-<tr class="memdesc:a2c4f8cce69e3676619079d932bd30536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="classCPipelineSim.html#a2c4f8cce69e3676619079d932bd30536">More...</a><br /></td></tr>
+<tr class="memdesc:a2c4f8cce69e3676619079d932bd30536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Destructor.  <a href="classCPipelineSim.html#a2c4f8cce69e3676619079d932bd30536">More...</a><br /></td></tr>
 <tr class="separator:a2c4f8cce69e3676619079d932bd30536"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95d7151f24ef36ebd84f3902141afdf4"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="CommonDef_8h.html#a9e573b32980bc2aee14f4d2639269b85">DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCPipelineSim.html#a95d7151f24ef36ebd84f3902141afdf4">GetCycle</a> (void) const noexcept</td></tr>
 <tr class="memdesc:a95d7151f24ef36ebd84f3902141afdf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current number of cycles executed.  <a href="classCPipelineSim.html#a95d7151f24ef36ebd84f3902141afdf4">More...</a><br /></td></tr>
@@ -125,7 +125,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:ac22407d38cc0a3eb9c10391b9247a1f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">a count of the stalls introduced  <a href="classCPipelineSim.html#ac22407d38cc0a3eb9c10391b9247a1f7">More...</a><br /></td></tr>
 <tr class="separator:ac22407d38cc0a3eb9c10391b9247a1f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8da1995f86a56db348bc74c974232260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CommonDef_8h.html#a9e573b32980bc2aee14f4d2639269b85">DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCPipelineSim.html#a8da1995f86a56db348bc74c974232260">m_dwCompletedCtr</a></td></tr>
-<tr class="memdesc:a8da1995f86a56db348bc74c974232260"><td class="mdescLeft">&#160;</td><td class="mdescRight">instructions that completed execution  <a href="classCPipelineSim.html#a8da1995f86a56db348bc74c974232260">More...</a><br /></td></tr>
+<tr class="memdesc:a8da1995f86a56db348bc74c974232260"><td class="mdescLeft">&#160;</td><td class="mdescRight">count of instructions that completed execution  <a href="classCPipelineSim.html#a8da1995f86a56db348bc74c974232260">More...</a><br /></td></tr>
 <tr class="separator:a8da1995f86a56db348bc74c974232260"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8097c884dbb4d3fb7ffad928fff9cd04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="CommonDef_8h.html#a9e573b32980bc2aee14f4d2639269b85">DWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCPipelineSim.html#a8097c884dbb4d3fb7ffad928fff9cd04">m_dwMaxPipelineDepth</a></td></tr>
 <tr class="memdesc:a8097c884dbb4d3fb7ffad928fff9cd04"><td class="mdescLeft">&#160;</td><td class="mdescRight">limit on instructions in the pipeline  <a href="classCPipelineSim.html#a8097c884dbb4d3fb7ffad928fff9cd04">More...</a><br /></td></tr>
@@ -192,7 +192,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destructor. </p>
+<p>Default Destructor. </p>
 
 </div>
 </div>
@@ -324,7 +324,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Adds the instruction to the instruction queue. </p>
-<p>Queued instructions are popped off the queue and inserted into the pipeline during the ProcessNextCycle method call. Instruction state is update accordingly to denote the current pipeline stage it is in.</p>
+<p>Queued instructions are popped off the queue and inserted into the pipeline during the ProcessNextCycle method call. Instruction state is updated accordingly to denote the current pipeline stage it is in.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">instruction</td><td>data to add to the queue for further insertion and processing in the pipeline.</td></tr>
@@ -446,7 +446,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>instructions that completed execution </p>
+<p>count of instructions that completed execution </p>
 
 </div>
 </div>

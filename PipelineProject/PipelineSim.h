@@ -149,10 +149,12 @@ public:
 class CNoopInstruction : public CInstructionData
 {
 public:
+    /// Default Constructor
     constexpr CNoopInstruction() noexcept
         : CInstructionData(NOOP_INSTRUCTION)
     { };
 
+    /// Initialization Constructor
     constexpr explicit CNoopInstruction(PS_PIPELINE_STATE psState) noexcept
         : CInstructionData(NOOP_INSTRUCTION, psState)
     { };
@@ -176,7 +178,7 @@ class CPipelineSim
 {
     DWORD                        m_dwCycle;                ///< maintains current pipeline cycle
     DWORD                        m_dwStallCtr;             ///< a count of the stalls introduced
-    DWORD                        m_dwCompletedCtr;         ///< instructions that completed execution
+    DWORD                        m_dwCompletedCtr;         ///< count of instructions that completed execution
     DWORD                        m_dwMaxPipelineDepth;     ///< limit on instructions in the pipeline
     std::list<CInstructionData>  m_lstInstructionPipeline; ///< our instruction pipeline
     std::queue<CInstructionData> m_queInstructions;        ///< our instruction queue
@@ -184,7 +186,7 @@ class CPipelineSim
 public:
     /// Default Constructor
     CPipelineSim() noexcept;
-    /// Destructor
+    /// Default Destructor
     ~CPipelineSim() = default;
 /**
     @brief Retrieves the current number of cycles executed
@@ -229,7 +231,7 @@ public:
         
     Queued instructions are popped off the queue and inserted into the 
     pipeline during the ProcessNextCycle method call. Instruction state is 
-    update accordingly to denote the current pipeline stage it is in.
+    updated accordingly to denote the current pipeline stage it is in.
 
     @param [in] instruction     data to add to the queue for
                                 further insertion and processing in

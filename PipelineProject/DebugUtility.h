@@ -34,10 +34,10 @@
   @param [in] szFmt     printf-styled format string
 
   @retval int  the number of characters written if the number of characters to 
-               write is less than or equal to count; if the number of characters 
-               to write is greater than count, these functions return -1 
-               indicating that output has been truncated. The return value does 
+               write is less than or equal to count; The return value does 
                not include the terminating null, if one is written.
+  @retval -1   if the number of characters to write is greater than count, returns -1 
+               indicating that output has been truncated. 
 */
 int DebugTrace (const TCHAR* szFmt, ...) noexcept;
 
@@ -46,11 +46,11 @@ int DebugTrace (const TCHAR* szFmt, ...) noexcept;
 
     @param [out] szModulePath   destination memory address used to write 
                                 application's directory path
-    @param [in]  cchLen         count of characters in available to be written 
+    @param [in]  cchLen         count of characters available to be written 
                                 in destination buffer
 
     @retval  TCHAR*             destination address
-    @retval  NULL               on error
+    @retval  nullptr            on error
 */
 TCHAR* GetModulePath(TCHAR* szModulePath, size_t cchLen) noexcept;
 
