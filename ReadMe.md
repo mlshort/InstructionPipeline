@@ -1,4 +1,4 @@
-#Instruction Pipeline Simulation
+# Instruction Pipeline Simulation
 
 DIRECTORY STRUCTURE: 
 =======================================================================
@@ -57,5 +57,4 @@ Reference(s)
  
   * [Technical Report - Polymorphic C++ Debugging for System Design](http://mesl.ucsd.edu/site/pubs/UCI-CECS-TR00-06.pdf),
     Doucet, Gupta, University of CA, Irvine, 2000
-
       
