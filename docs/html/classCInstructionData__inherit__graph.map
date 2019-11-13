@@ -1,0 +1,4 @@
+<map id="CInstructionData" name="CInstructionData">
+<area shape="rect" id="node1" title="Instruction data and state." alt="" coords="7,5,125,32"/>
+<area shape="rect" id="node2" href="$classCNoopInstruction.html" title="simulates injecting a bubble into the pipeline" alt="" coords="5,80,127,107"/>
+</map>

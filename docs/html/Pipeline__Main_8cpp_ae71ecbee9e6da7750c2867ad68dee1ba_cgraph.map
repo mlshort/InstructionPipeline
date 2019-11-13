@@ -1,0 +1,4 @@
+<map id="CalculateSequentialExecutionCycles" name="CalculateSequentialExecutionCycles">
+<area shape="rect" id="node1" title="CalculateSequentialExecutionCycles calculates the number of cycles required to &quot;sequentially&quot; execute..." alt="" coords="5,5,200,47"/>
+<area shape="rect" id="node2" href="$classCDependencyGraph.html#ac22434568b7164279f14aa779a3a5313" title="Retrieves the current number of nodes in the graph." alt="" coords="248,5,443,47"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classCInstructionData.html" title="Instruction data and state." alt="" coords="5,5,124,32"/>
+<area shape="rect" id="node2" href="$classCNoopInstruction.html" title="simulates injecting a bubble into the pipeline" alt="" coords="172,5,293,32"/>
+</map>

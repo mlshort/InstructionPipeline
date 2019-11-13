@@ -34,23 +34,23 @@ bool CGraphNode::AddEdge ( const CDirectedEdgeData& edge )
     return bReturn;
 }
 
-const size_t DEFAULT_MAX_NODES = 10;
+constexpr size_t DEFAULT_MAX_NODES = 10;
 
-CDependencyGraph::CDependencyGraph ( )
+CDependencyGraph::CDependencyGraph ( ) noexcept
     : m_nMaxNodes(DEFAULT_MAX_NODES), 
       m_nNumNodes(0),
       m_vNodes(DEFAULT_MAX_NODES)
 {
 }
 
-CDependencyGraph::CDependencyGraph ( size_t nMaxNodes )
+CDependencyGraph::CDependencyGraph ( size_t nMaxNodes ) noexcept
     : m_nMaxNodes(nMaxNodes), 
       m_nNumNodes(0),
       m_vNodes(nMaxNodes)
 {
 }
 
-bool CDependencyGraph::AddNode ( const NODE_ID_T& idNode )
+bool CDependencyGraph::AddNode ( const NODE_ID_T& idNode ) noexcept
 {
     bool bReturn = false;
 
@@ -74,7 +74,7 @@ bool CDependencyGraph::AddNode ( const NODE_ID_T& idNode )
     return bReturn;
 }
 
-bool CDependencyGraph::AddEdge ( const NODE_ID_T& idFromNode, const NODE_ID_T& idToNode, int iWeight )
+bool CDependencyGraph::AddEdge ( const NODE_ID_T& idFromNode, const NODE_ID_T& idToNode, int iWeight ) noexcept
 {
     bool bReturn = false;
 
@@ -92,18 +92,12 @@ bool CDependencyGraph::AddEdge ( const NODE_ID_T& idFromNode, const NODE_ID_T& i
 }
 
 
-size_t CDependencyGraph::GetNumNodes ( void ) const
-{
-    return m_nNumNodes;
-}
-
-
-size_t CDependencyGraph::GetNumEdges ( void ) const
+size_t CDependencyGraph::GetNumEdges ( void ) const noexcept
 {
     size_t nNumEdges = 0;
 
     // following static cast added to address compiler warning
-    for (int i = 0; i < static_cast<int>(m_nMaxNodes); i++)
+    for (size_t i = 0; i < m_nMaxNodes; i++)
     {
         nNumEdges += m_vNodes[i].GetNumEdges();
     }
@@ -111,7 +105,7 @@ size_t CDependencyGraph::GetNumEdges ( void ) const
     return nNumEdges;
 }
 
-bool    CDependencyGraph::IsValidNodeID ( const NODE_ID_T& idNode ) const
+bool    CDependencyGraph::IsValidNodeID ( const NODE_ID_T& idNode ) const noexcept
 {
     bool bReturn = false;
 // we are only allowing up to 25 instructions, each represented by a char in
@@ -122,21 +116,11 @@ bool    CDependencyGraph::IsValidNodeID ( const NODE_ID_T& idNode ) const
     return bReturn;
 }
 
-bool    CDependencyGraph::IsValidNodeIndex ( size_t nIndex ) const
-{
-    bool bReturn = false;
-
-    if ( nIndex < m_nMaxNodes )
-        bReturn = true;
-
-    return bReturn;
-}
-
 /**
     Following method performs a pseudo-hashing of the node ID to
     determine the proper location of the Node in the vector
 */
-size_t  CDependencyGraph::GetNodeIndex ( const NODE_ID_T& idNode ) const
+size_t  CDependencyGraph::GetNodeIndex ( const NODE_ID_T& idNode ) const noexcept
 {
     size_t nReturn = INVALID_NODE_INDEX;
 
@@ -150,7 +134,7 @@ size_t  CDependencyGraph::GetNodeIndex ( const NODE_ID_T& idNode ) const
     return nReturn;
 }
 
-bool CDependencyGraph::HasNode(const NODE_ID_T& idNode) const
+bool CDependencyGraph::HasNode(const NODE_ID_T& idNode) const noexcept
 {
     bool bReturn = false;
 
@@ -167,7 +151,3 @@ bool CDependencyGraph::HasNode(const NODE_ID_T& idNode) const
 
     return bReturn;
 };
-
-CDependencyGraph::~CDependencyGraph ( )
-{
-}

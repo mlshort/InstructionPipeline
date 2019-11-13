@@ -1,4 +1,4 @@
-NAME:     Instruction Pipeline Simulation
+#Instruction Pipeline Simulation
 
 DIRECTORY STRUCTURE: 
 =======================================================================
@@ -7,9 +7,9 @@ DIRECTORY STRUCTURE:
 + --- \Bin              (compiled executable)
 + --- \Data             (input file data)
 + --- \Documentation    (implementation documentation)
++ --- \Reference Documents
 + --- \Obj              (discardable binary intermediaries)
-
-DESCRIPTION:         see below  
+ 
 DATE WRITTEN:        November 25, 2014  
 
 Instruction Pipeline Project Overview

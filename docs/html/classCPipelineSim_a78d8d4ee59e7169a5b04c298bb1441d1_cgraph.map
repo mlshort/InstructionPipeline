@@ -1,0 +1,4 @@
+<map id="CPipelineSim::ProcessNextCycle" name="CPipelineSim::ProcessNextCycle">
+<area shape="rect" id="node1" title="Process next pipeline instruction cycle." alt="" coords="5,5,188,47"/>
+<area shape="rect" id="node2" href="$classCInstructionData.html#a2911d66e9324f96c41f48552725b044c" title="Gets the instruction pipeline state." alt="" coords="236,13,415,39"/>
+</map>

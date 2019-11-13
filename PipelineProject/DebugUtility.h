@@ -39,7 +39,7 @@
                indicating that output has been truncated. The return value does 
                not include the terminating null, if one is written.
 */
-int DebugTrace (const TCHAR* szFmt, ...);
+int DebugTrace (const TCHAR* szFmt, ...) noexcept;
 
 /**
     @brief Retrieves the current executable directory
@@ -52,6 +52,6 @@ int DebugTrace (const TCHAR* szFmt, ...);
     @retval  TCHAR*             destination address
     @retval  NULL               on error
 */
-TCHAR* GetModulePath(TCHAR* szModulePath, size_t cchLen);
+TCHAR* GetModulePath(TCHAR* szModulePath, size_t cchLen) noexcept;
 
 #endif

@@ -1,0 +1,5 @@
+<map id="CalculateNumberOfStallsRequired" name="CalculateNumberOfStallsRequired">
+<area shape="rect" id="node1" title="CalculateNumberOfStallsRequired calculates data&#45;dependent pipeline stalls." alt="" coords="5,31,224,57"/>
+<area shape="rect" id="node2" href="$classCDependencyGraph.html#a9d1914f00725fe3efff9e0c52772e3fd" title="Affords iteration functionality." alt="" coords="272,5,449,32"/>
+<area shape="rect" id="node3" href="$classCDependencyGraph.html#a825d0e807345fef89144d74a362d1e79" title="Affords iteration functionality." alt="" coords="277,56,444,83"/>
+</map>

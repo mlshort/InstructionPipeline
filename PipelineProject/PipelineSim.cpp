@@ -14,13 +14,13 @@
   four-stage pipeline only allows concurrent processing
   of four instructions at a time.
 */
-const int CONCURRENT_INSTRUCTION_LIMIT = 4;
+constexpr int CONCURRENT_INSTRUCTION_LIMIT = 4;
 
 typedef std::list<CInstructionData>::iterator         LstIterator;
 typedef std::list<CInstructionData>::reverse_iterator rLstIterator;
 
 
-CPipelineSim::CPipelineSim ( )
+CPipelineSim::CPipelineSim ( ) noexcept
     : m_dwCycle(0),
       m_dwStallCtr(0),
       m_dwCompletedCtr(0),
@@ -30,7 +30,7 @@ CPipelineSim::CPipelineSim ( )
 {
 }
 
-bool CPipelineSim::ProcessNextCycle(void)
+bool CPipelineSim::ProcessNextCycle(void) noexcept
 {
     bool bReturn = false;
     // increment the cycle counter
@@ -139,14 +139,14 @@ bool CPipelineSim::ProcessNextCycle(void)
     return bReturn;
 };
 
-size_t CPipelineSim::InsertInstruction ( const CInstructionData& instruction )
+size_t CPipelineSim::InsertInstruction ( const CInstructionData& instruction ) noexcept
 {
     m_queInstructions.push(instruction);
 
     return m_queInstructions.size();
 };
 
-tostream& CPipelineSim::OutputCurrentInstructionCycle ( tostream& os )
+tostream& CPipelineSim::OutputCurrentInstructionCycle ( tostream& os ) noexcept
 {
     for ( LstIterator it = m_lstInstructionPipeline.begin ( ); 
           it != m_lstInstructionPipeline.end ( ); ++it )
@@ -169,6 +169,3 @@ tostream& CPipelineSim::OutputCurrentInstructionCycle ( tostream& os )
     return os;
 }
 
-CPipelineSim::~CPipelineSim ( )
-{
-}

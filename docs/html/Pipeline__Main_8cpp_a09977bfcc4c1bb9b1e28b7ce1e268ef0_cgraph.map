@@ -1,0 +1,6 @@
+<map id="ExecutePipelineSimulation" name="ExecutePipelineSimulation">
+<area shape="rect" id="node1" title="Performs basic pipeline process simulation." alt="" coords="5,46,183,73"/>
+<area shape="rect" id="node2" href="$Pipeline__Main_8cpp.html#a92c02fcbdbb9793f0f159b8721611431" title="CalculatePartialOverlappedExecutionCycles computes the number of cycles required to execute a set of ..." alt="" coords="239,5,417,47"/>
+<area shape="rect" id="node4" href="$Pipeline__Main_8cpp.html#a97ef98457a10772f08719bea2415c5e9" title="CalculateSequentialExecutionCycles calculates the number of cycles required to &quot;sequentially&quot; execute..." alt="" coords="231,71,425,112"/>
+<area shape="rect" id="node3" href="$Pipeline__Main_8cpp.html#ab0e910dd8ec1b6582ce41c3cf6818083" title="CalculateNumberOfStallsRequired calculates data&#45;dependent pipeline stalls." alt="" coords="473,13,692,39"/>
+</map>

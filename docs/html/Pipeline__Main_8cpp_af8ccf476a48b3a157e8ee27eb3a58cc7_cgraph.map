@@ -1,0 +1,12 @@
+<map id="ExecutePipelineSimulation" name="ExecutePipelineSimulation">
+<area shape="rect" id="node1" title="Performs basic pipeline process simulation." alt="" coords="5,198,183,225"/>
+<area shape="rect" id="node2" href="$classCDependencyGraph.html#a9d1914f00725fe3efff9e0c52772e3fd" title="Affords iteration functionality." alt="" coords="745,45,923,72"/>
+<area shape="rect" id="node3" href="$Pipeline__Main_8cpp.html#a900ec061cff4279f39762b312bedf302" title="CalculatePartialOverlappedExecutionCycles computes the number of cycles required to execute a set of ..." alt="" coords="242,67,419,108"/>
+<area shape="rect" id="node5" href="$classCDependencyGraph.html#a825d0e807345fef89144d74a362d1e79" title="Affords iteration functionality." alt="" coords="751,132,917,158"/>
+<area shape="rect" id="node7" href="$Pipeline__Main_8cpp.html#ae71ecbee9e6da7750c2867ad68dee1ba" title="CalculateSequentialExecutionCycles calculates the number of cycles required to &quot;sequentially&quot; execute..." alt="" coords="233,132,428,174"/>
+<area shape="rect" id="node8" href="$classCPipelineSim.html#a482f4d58e880cecd9abc144c9432aa18" title="Adds the instruction to the instruction queue." alt="" coords="231,249,431,276"/>
+<area shape="rect" id="node9" href="$classCPipelineSim.html#ab4797d3e0cf5301bd96efb3bf09e75c3" title="formats and outputs current pipelined instructions to the provided stream" alt="" coords="236,300,425,342"/>
+<area shape="rect" id="node10" href="$classCPipelineSim.html#a5ff935e065e20528836fc760088581ce" title="Process next pipeline instruction cycle." alt="" coords="239,366,422,407"/>
+<area shape="rect" id="node4" href="$Pipeline__Main_8cpp.html#a3c57f76a1af51162c9dbfddd247a61ca" title="CalculateNumberOfStallsRequired calculates data&#45;dependent pipeline stalls." alt="" coords="479,74,697,101"/>
+<area shape="rect" id="node6" href="$classCDependencyGraph.html#ac22434568b7164279f14aa779a3a5313" title="Retrieves the current number of nodes in the graph." alt="" coords="491,128,685,170"/>
+</map>

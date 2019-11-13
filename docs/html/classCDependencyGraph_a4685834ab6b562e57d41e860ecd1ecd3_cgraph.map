@@ -1,0 +1,6 @@
+<map id="CDependencyGraph::AddNode" name="CDependencyGraph::AddNode">
+<area shape="rect" id="node1" title="This method adds a new node to the graph." alt="" coords="5,46,204,73"/>
+<area shape="rect" id="node2" href="$classCDependencyGraph.html#a80fd7d45d34b1e7700241eb2134b0393" title="returns corresponding node index" alt="" coords="252,5,449,47"/>
+<area shape="rect" id="node4" href="$classCDependencyGraph.html#a0f5c189aee7aed3634eaa4f9377333c6" title="Performs basic validation of a node index." alt="" coords="258,71,443,112"/>
+<area shape="rect" id="node3" href="$classCDependencyGraph.html#a3e672e8934ee13252c3d7ed49bf6c1e7" title="Performs basic validation of node ID." alt="" coords="497,5,683,47"/>
+</map>

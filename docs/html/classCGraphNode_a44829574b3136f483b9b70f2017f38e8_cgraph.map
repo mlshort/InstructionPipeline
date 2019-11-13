@@ -1,0 +1,4 @@
+<map id="CGraphNode::GetNumEdges" name="CGraphNode::GetNumEdges">
+<area shape="rect" id="node1" title="Retrieves number of edges." alt="" coords="5,5,195,32"/>
+<area shape="rect" id="node2" href="$classCGraphNode.html#a1c9208d082a9c639e25cbebe39ca3d05" title="Used to check to see if this node is active." alt="" coords="243,5,385,32"/>
+</map>

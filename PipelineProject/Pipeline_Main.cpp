@@ -64,12 +64,12 @@
 #endif
 
 /// maximum instructions specified
-const int MAX_INSTRUCTIONS           = 25;
+constexpr int MAX_INSTRUCTIONS           = 25;
 /// non-overlapped cycles required to execute 1 instruction in a 4 staged-pipeline
-const int BASE_CYCLES_PER_INSTUCTION = 4;
+constexpr int BASE_CYCLES_PER_INSTUCTION = 4;
 
 /// File used to read in test case data
-const TCHAR      g_szFileName[] = _T("InstructionInputData.txt");
+constexpr TCHAR  g_szFileName[] = _T("InstructionInputData.txt");
 /// Global directed acyclic graph object
 CDependencyGraph g_DAG(MAX_INSTRUCTIONS);
 /// Global pipeline simulation object
@@ -89,7 +89,7 @@ CPipelineSim     g_PipelineSim;
  * @retval int              the number sequential cycles required to run 
  *                          the instructions contained in DAG
  */
-int  CalculateSequentialExecutionCycles(const CDependencyGraph& dag);
+int  CalculateSequentialExecutionCycles(const CDependencyGraph& dag) noexcept;
 
 /**
  * @brief CalculateCompleteOverlappedExecutionCycles calculates the best 
@@ -110,7 +110,7 @@ int  CalculateSequentialExecutionCycles(const CDependencyGraph& dag);
  * @retval int              the number of overlapped cycles (with no delays) 
  *                          required to run the instructions contained in DAG
  */
-int  CalculateCompleteOverlappedExecutionCycles ( const CDependencyGraph& dag );
+int  CalculateCompleteOverlappedExecutionCycles ( const CDependencyGraph& dag ) noexcept;
 
 /** 
 * @brief CalculatePartialOverlappedExecutionCycles computes the number of
@@ -164,7 +164,7 @@ int  CalculateCompleteOverlappedExecutionCycles ( const CDependencyGraph& dag );
 * @retval int              the number of overlapped cycles (with delays)
 *                          required to run the instructions contained in DAG
 */
-int CalculatePartialOverlappedExecutionCycles ( const CDependencyGraph& dag );
+int CalculatePartialOverlappedExecutionCycles ( const CDependencyGraph& dag ) noexcept;
 
 /**
  * @brief CalculateNumberOfStallsRequired calculates data-dependent 
@@ -180,7 +180,7 @@ int CalculatePartialOverlappedExecutionCycles ( const CDependencyGraph& dag );
  *                          address instruction data dependencies 
  *                          identified in a the DAGi
  */
-int  CalculateNumberOfStallsRequired ( const CDependencyGraph& dag );
+int  CalculateNumberOfStallsRequired ( const CDependencyGraph& dag ) noexcept;
 
 /**
  * @brief Performs basic pipeline process simulation.
@@ -196,7 +196,7 @@ int  CalculateNumberOfStallsRequired ( const CDependencyGraph& dag );
  * @retval false            on error
  *
  */
-bool ExecutePipelineSimulation ( CPipelineSim& sim, const CDependencyGraph& dag );
+bool ExecutePipelineSimulation ( CPipelineSim& sim, const CDependencyGraph& dag ) noexcept;
 
 
 /**
@@ -296,22 +296,22 @@ size_t LoadData ( const TCHAR* szFileName, CDependencyGraph& dag )
     return nReturn;
 }
 
-int CalculateSequentialExecutionCycles ( const CDependencyGraph& dag )
+int CalculateSequentialExecutionCycles ( const CDependencyGraph& dag ) noexcept
 {
     return dag.GetNumNodes ( ) * BASE_CYCLES_PER_INSTUCTION;
 }
 
-int CalculateCompleteOverlappedExecutionCycles ( const CDependencyGraph& dag )
+int CalculateCompleteOverlappedExecutionCycles ( const CDependencyGraph& dag ) noexcept
 {
     return dag.GetNumNodes ( ) + 3;
 }
 
-int CalculatePartialOverlappedExecutionCycles ( const CDependencyGraph& dag )
+int CalculatePartialOverlappedExecutionCycles ( const CDependencyGraph& dag ) noexcept
 {
     return dag.GetNumNodes() + CalculateNumberOfStallsRequired(dag) + 3;
 }
 
-int  CalculateNumberOfStallsRequired ( const CDependencyGraph& dag )
+int  CalculateNumberOfStallsRequired ( const CDependencyGraph& dag ) noexcept
 {
     int iNumStalls = 0;
 
@@ -333,7 +333,7 @@ int  CalculateNumberOfStallsRequired ( const CDependencyGraph& dag )
     return iNumStalls;
 }
 
-bool ExecutePipelineSimulation ( CPipelineSim& sim, const CDependencyGraph& dag)
+bool ExecutePipelineSimulation ( CPipelineSim& sim, const CDependencyGraph& dag) noexcept
 {
     bool bReturn = false;
 

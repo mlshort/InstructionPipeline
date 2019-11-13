@@ -60,9 +60,9 @@ typedef enum PS_PIPELINE_STATE
 typedef TCHAR INSTRUCTION_T;
 
 /// used to denote an uninitialized instruction
-const INSTRUCTION_T INVALID_INSTRUCTION = 0;
+constexpr INSTRUCTION_T INVALID_INSTRUCTION = 0;
 /// used to denote a no-operation instruction
-const INSTRUCTION_T NOOP_INSTRUCTION    = '-';
+constexpr INSTRUCTION_T NOOP_INSTRUCTION    = '-';
 
 /** 
     @brief Instruction data and state
@@ -74,38 +74,38 @@ class CInstructionData
     bool              m_bDataDependent;
 public:
     /// Default Constructor
-    CInstructionData()
+    constexpr CInstructionData() noexcept
         : m_Instruction    ( INVALID_INSTRUCTION ),
           m_psState        ( PS_INVALID ),
           m_bDataDependent ( false )
     { };
+
     /// Initialization Constructor
-    CInstructionData ( const INSTRUCTION_T& instruction, 
-                       bool bDataDependent )
+    constexpr explicit CInstructionData ( const INSTRUCTION_T& instruction, 
+                                          bool bDataDependent = false ) noexcept
         : m_Instruction    ( instruction ),
           m_psState        ( PS_INVALID ),
           m_bDataDependent ( bDataDependent )
     { };
 
     /// Initialization Constructor
-    CInstructionData ( const INSTRUCTION_T& instruction, 
-                       PS_PIPELINE_STATE psState = PS_INVALID, 
-                       bool bDataDependent = false )
+    constexpr explicit CInstructionData ( const INSTRUCTION_T& instruction, 
+                                          PS_PIPELINE_STATE psState, 
+                                          bool bDataDependent = false ) noexcept
         : m_Instruction   ( instruction ),
           m_psState       ( psState ),
           m_bDataDependent( bDataDependent )
     { };
 
     /// Destructor
-    ~CInstructionData() 
-    { };
+    ~CInstructionData() = default;
 
 /**
     @brief  Retrieves the instruction
 
     @retval INSTRUCTION_T containing instruction type
 */
-    INSTRUCTION_T     GetInstruction(void) const throw()
+    constexpr INSTRUCTION_T  GetInstruction(void) const noexcept
     { return m_Instruction; };
 
 /**
@@ -118,12 +118,13 @@ public:
     @retval PS_WB           Write Back
     @retval PS_COMPLETED    instruction processing completed
 */
-    PS_PIPELINE_STATE GetState(void) const throw()
+    constexpr PS_PIPELINE_STATE GetState(void) const noexcept
     { return m_psState; };
+
 /**
     @brief Sets the instruction pipeline state
 */
-    void              SetState(PS_PIPELINE_STATE psSet) throw()
+    void              SetState(PS_PIPELINE_STATE psSet) noexcept
     { m_psState = psSet; };
 
 /**
@@ -132,13 +133,13 @@ public:
     @retval false   if no data-dependencies have been
                     annotated
 */
-    bool              IsDataDependent(void) const throw()
+    constexpr bool    IsDataDependent(void) const noexcept
     { return m_bDataDependent; };
 
-    void              SetDataDependent(bool bSet = true) throw()
+    void              SetDataDependent(bool bSet = true) noexcept
     { m_bDataDependent = bSet; };
 
-    bool              IsNOOP(void) const throw()
+    constexpr bool    IsNOOP(void) const noexcept
     { return m_Instruction == NOOP_INSTRUCTION; };
 };
 
@@ -148,11 +149,11 @@ public:
 class CNoopInstruction : public CInstructionData
 {
 public:
-    CNoopInstruction()
+    constexpr CNoopInstruction() noexcept
         : CInstructionData(NOOP_INSTRUCTION)
     { };
 
-    CNoopInstruction (PS_PIPELINE_STATE psState)
+    constexpr explicit CNoopInstruction(PS_PIPELINE_STATE psState) noexcept
         : CInstructionData(NOOP_INSTRUCTION, psState)
     { };
 };
@@ -182,15 +183,15 @@ class CPipelineSim
 
 public:
     /// Default Constructor
-    CPipelineSim ( );
+    CPipelineSim() noexcept;
     /// Destructor
-    ~CPipelineSim ( );
+    ~CPipelineSim() = default;
 /**
     @brief Retrieves the current number of cycles executed
 
     @retval DWORD       current cycle
 */
-    DWORD GetCycle(void) const throw()
+    constexpr DWORD GetCycle(void) const noexcept
     { return m_dwCycle; };
 
 /**
@@ -198,7 +199,7 @@ public:
 
     @retval DWORD   count of stalls
 */
-    DWORD GetStallCount(void) const throw()
+    constexpr DWORD GetStallCount(void) const noexcept
     { return m_dwStallCtr; };
 
 /**
@@ -206,7 +207,7 @@ public:
 
     @retval DWORD   count of completed instructions
 */
-    DWORD GetCompletionCount(void) const throw()
+    constexpr DWORD GetCompletionCount(void) const noexcept
     { return m_dwCompletedCtr; };
 
 /**
@@ -221,10 +222,10 @@ public:
     @retval false   if there are no more instructions to be 
                     executed.
 */
-    bool ProcessNextCycle(void);
+    bool ProcessNextCycle(void) noexcept;
 
 /**
-    @brief Adds the instruction to the instruction queue.  
+    @brief Adds the instruction to the instruction queue.
         
     Queued instructions are popped off the queue and inserted into the 
     pipeline during the ProcessNextCycle method call. Instruction state is 
@@ -236,14 +237,16 @@ public:
 
     @retval size_t              number of instructions in the queue
 */
-    size_t InsertInstruction( const CInstructionData& instruction );
+    size_t InsertInstruction( const CInstructionData& instruction ) noexcept;
 
 /**
     @brief formats and outputs current pipelined instructions to the provided stream
 
     @param [in,out] os          destination output stream
+
+    @retval tostream&           reference to updated stream
 */
-    tostream&   OutputCurrentInstructionCycle( tostream& os );
+    tostream&   OutputCurrentInstructionCycle( tostream& os ) noexcept;
 
 
 };

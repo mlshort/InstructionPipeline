@@ -1,0 +1,7 @@
+<map id="CalculatePartialOverlappedExecutionCycles" name="CalculatePartialOverlappedExecutionCycles">
+<area shape="rect" id="node1" title="CalculatePartialOverlappedExecutionCycles computes the number of cycles required to execute a set of ..." alt="" coords="5,53,183,94"/>
+<area shape="rect" id="node2" href="$Pipeline__Main_8cpp.html#a3c57f76a1af51162c9dbfddd247a61ca" title="CalculateNumberOfStallsRequired calculates data&#45;dependent pipeline stalls." alt="" coords="231,31,449,57"/>
+<area shape="rect" id="node5" href="$classCDependencyGraph.html#ac22434568b7164279f14aa779a3a5313" title="Retrieves the current number of nodes in the graph." alt="" coords="243,82,437,123"/>
+<area shape="rect" id="node3" href="$classCDependencyGraph.html#a9d1914f00725fe3efff9e0c52772e3fd" title="Affords iteration functionality." alt="" coords="497,5,675,32"/>
+<area shape="rect" id="node4" href="$classCDependencyGraph.html#a825d0e807345fef89144d74a362d1e79" title="Affords iteration functionality." alt="" coords="503,56,669,83"/>
+</map>

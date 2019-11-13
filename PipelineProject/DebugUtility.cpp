@@ -23,7 +23,7 @@
 
 #endif
 
-int DebugTrace (const TCHAR* szFmt, ...)
+int DebugTrace (const TCHAR* szFmt, ...) noexcept
 {
     TCHAR szDebugMsg[512] = { 0 };
 
@@ -40,7 +40,7 @@ int DebugTrace (const TCHAR* szFmt, ...)
 
 }
 
-TCHAR* GetModulePath (TCHAR* szModulePath, size_t cchLen)
+TCHAR* GetModulePath (TCHAR* szModulePath, size_t cchLen) noexcept
 {
     // Get the executable file path
     TCHAR szModuleFileName[_MAX_PATH] = { 0 };
@@ -48,12 +48,12 @@ TCHAR* GetModulePath (TCHAR* szModulePath, size_t cchLen)
     // Note, if HANDLE is NULL, GetModuleFileName is supposed to return the file 
     // path to the current executable, but it appears that it is inconsistently 
     // returning filename as well....
-    DWORD dwStrLen = ::GetModuleFileName (NULL, szModuleFileName, 
+    DWORD dwStrLen = ::GetModuleFileName (nullptr, szModuleFileName, 
                                           _countof(szModuleFileName) );
 
     TCHAR szDir[_MAX_PATH] = {0};
 
-    _tsplitpath(szModuleFileName, szDir, &szDir[2], NULL, NULL);
+    _tsplitpath(szModuleFileName, szDir, &szDir[2], nullptr, nullptr);
 
     return _tcsncpy(szModulePath, szDir, cchLen);
 }
