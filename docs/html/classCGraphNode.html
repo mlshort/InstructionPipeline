@@ -29,7 +29,7 @@
    <div id="projectname">Pipeline Project
    &#160;<span id="projectnumber">1</span>
    </div>
-   <div id="projectbrief">Instruction Pipeline Simulation</div>
+   <div id="projectbrief">Simulation</div>
   </td>
  </tr>
  </tbody>
@@ -113,7 +113,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8dd4673d25e953504d000ea12eca713f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves this object's node ID.  <a href="classCGraphNode.html#a8dd4673d25e953504d000ea12eca713f">More...</a><br /></td></tr>
 <tr class="separator:a8dd4673d25e953504d000ea12eca713f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fb777648480c8b42878b8c9e2f166c1"><td class="memItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGraphNode.html#a6fb777648480c8b42878b8c9e2f166c1">IsValid</a> (void) const noexcept</td></tr>
-<tr class="memdesc:a6fb777648480c8b42878b8c9e2f166c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to check to see if this node is active.  <a href="classCGraphNode.html#a6fb777648480c8b42878b8c9e2f166c1">More...</a><br /></td></tr>
+<tr class="memdesc:a6fb777648480c8b42878b8c9e2f166c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to check to see if node is active.  <a href="classCGraphNode.html#a6fb777648480c8b42878b8c9e2f166c1">More...</a><br /></td></tr>
 <tr class="separator:a6fb777648480c8b42878b8c9e2f166c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb43a3f8b4aadd56e496a8965e07e62b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGraphNode.html#adb43a3f8b4aadd56e496a8965e07e62b">AddEdge</a> (const <a class="el" href="DependencyGraph_8h.html#ab6d9dd01d579c15e1b3273c0d1b4f042">NODE_ID_T</a> &amp;idToNode, int iWeight)</td></tr>
 <tr class="memdesc:adb43a3f8b4aadd56e496a8965e07e62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">adds a new edge to the graph  <a href="classCGraphNode.html#adb43a3f8b4aadd56e496a8965e07e62b">More...</a><br /></td></tr>
@@ -333,7 +333,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classCGraphNode_ad45462fb7f58e500bacab979dfdef8a8_cgraph.png" border="0" usemap="#classCGraphNode_ad45462fb7f58e500bacab979dfdef8a8_cgraph" alt=""/></div>
 <map name="classCGraphNode_ad45462fb7f58e500bacab979dfdef8a8_cgraph" id="classCGraphNode_ad45462fb7f58e500bacab979dfdef8a8_cgraph">
 <area shape="rect" title="Adds a new edge the graph." alt="" coords="5,5,163,32"/>
-<area shape="rect" href="classCGraphNode.html#a6fb777648480c8b42878b8c9e2f166c1" title="Used to check to see if this node is active." alt="" coords="211,5,353,32"/>
+<area shape="rect" href="classCGraphNode.html#a6fb777648480c8b42878b8c9e2f166c1" title="Used to check to see if node is active." alt="" coords="211,5,353,32"/>
 </map>
 </div>
 
@@ -528,7 +528,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="classCGraphNode_a157b58fe58b1d148294fabb19134be97_cgraph.png" border="0" usemap="#classCGraphNode_a157b58fe58b1d148294fabb19134be97_cgraph" alt=""/></div>
 <map name="classCGraphNode_a157b58fe58b1d148294fabb19134be97_cgraph" id="classCGraphNode_a157b58fe58b1d148294fabb19134be97_cgraph">
 <area shape="rect" title="Retrieves number of edges." alt="" coords="5,5,195,32"/>
-<area shape="rect" href="classCGraphNode.html#a6fb777648480c8b42878b8c9e2f166c1" title="Used to check to see if this node is active." alt="" coords="243,5,385,32"/>
+<area shape="rect" href="classCGraphNode.html#a6fb777648480c8b42878b8c9e2f166c1" title="Used to check to see if node is active." alt="" coords="243,5,385,32"/>
 </map>
 </div>
 
@@ -591,12 +591,12 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Used to check to see if this node is active. </p>
+<p>Used to check to see if node is active. </p>
 <p>This method checks to see if this node is active and assigned to a graph.</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>if current node ID is valid, denoting it has been added to the graph </td></tr>
-    <tr><td class="paramname">false</td><td>if m_ID == INVALID_NODE_ID </td></tr>
+    <tr><td class="paramname">true</td><td>if member node ID is valid, denoting it has been added to the graph </td></tr>
+    <tr><td class="paramname">false</td><td>if member node ID deemed invalid </td></tr>
   </table>
   </dd>
 </dl>

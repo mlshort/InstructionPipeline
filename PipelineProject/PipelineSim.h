@@ -171,7 +171,7 @@ public:
     process it is in.  Additionally, no two instructions may share 
     the same 'state' concurrently.
 
-    This class uses simulates a pipeline in the form of a linked-list
+    This class simulates a pipeline in the form of a linked-list
     to model the concurrent instruction processing.
 */
 class CPipelineSim

@@ -190,14 +190,14 @@ public:
     { return m_ID; };
 
 /**
-    @brief Used to check to see if this node is active.
+    @brief Used to check to see if node is active.
 
     This method checks to see if this node is active
     and assigned to a graph.
 
-    @retval true    if current node ID is valid, denoting it 
+    @retval true    if member node ID is valid, denoting it 
                     has been added to the graph
-    @retval false   if m_ID == INVALID_NODE_ID
+    @retval false   if member node ID deemed invalid
 */
     constexpr bool IsValid(void) const noexcept
     { return m_ID != INVALID_NODE_ID; };

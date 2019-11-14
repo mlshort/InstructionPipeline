@@ -213,7 +213,7 @@ bool ExecutePipelineSimulation ( CPipelineSim& sim, const CDependencyGraph& dag 
 size_t LoadData ( const TCHAR* szFileName, CDependencyGraph& dag );
 
 
-int _tmain ( int argc, _TCHAR* argv[] )
+int _tmain ( int /*argc*/, _TCHAR* /*argv[]*/ )
 {
     if (LoadData(g_szFileName, g_DAG) == 0)
     {
